@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { useAnimation } from "framer-motion";
+import { useEffect, useRef, useState } from 'react';
+import { AnimationControls, useAnimation } from 'framer-motion';
 
 export type AnimationType = 
   | "fadeIn" 
@@ -12,96 +12,111 @@ export type AnimationType =
   | "bounce";
 
 export function useAnimateOnScroll(type: AnimationType = "fadeInUp", threshold = 0.1, once = true) {
+  const controls = useAnimation();
   const ref = useRef<HTMLDivElement>(null);
-  const control = useAnimation();
-  const hasAnimated = useRef(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
-  const getAnimationProps = () => {
-    switch (type) {
+  // Define animation variants based on type
+  const getAnimationVariants = (animationType: AnimationType) => {
+    switch (animationType) {
       case "fadeIn":
-        return { 
-          initial: { opacity: 0 },
-          animate: { opacity: 1, transition: { duration: 0.8 } }
+        return {
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transition: { duration: 0.6 } }
         };
       case "fadeInUp":
-        return { 
-          initial: { opacity: 0, y: 50 },
-          animate: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+        return {
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
         };
       case "fadeInDown":
-        return { 
-          initial: { opacity: 0, y: -50 },
-          animate: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+        return {
+          hidden: { opacity: 0, y: -50 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
         };
       case "fadeInLeft":
-        return { 
-          initial: { opacity: 0, x: -50 },
-          animate: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+        return {
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
         };
       case "fadeInRight":
-        return { 
-          initial: { opacity: 0, x: 50 },
-          animate: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+        return {
+          hidden: { opacity: 0, x: 50 },
+          visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
         };
       case "zoomIn":
-        return { 
-          initial: { opacity: 0, scale: 0.8 },
-          animate: { opacity: 1, scale: 1, transition: { duration: 0.8 } }
+        return {
+          hidden: { opacity: 0, scale: 0.8 },
+          visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
         };
       case "rotateIn":
-        return { 
-          initial: { opacity: 0, rotate: -90 },
-          animate: { opacity: 1, rotate: 0, transition: { duration: 0.8 } }
+        return {
+          hidden: { opacity: 0, rotate: -20, scale: 0.8 },
+          visible: { 
+            opacity: 1, 
+            rotate: 0, 
+            scale: 1, 
+            transition: { duration: 0.6, ease: "easeOut" } 
+          }
         };
       case "bounce":
-        return { 
-          initial: { opacity: 0, y: 50 },
-          animate: { 
+        return {
+          hidden: { opacity: 0, y: 50 },
+          visible: { 
             opacity: 1, 
             y: 0, 
             transition: { 
               type: "spring", 
               stiffness: 300, 
-              damping: 15 
+              damping: 10,
+              duration: 0.7 
             } 
           }
         };
       default:
-        return { 
-          initial: { opacity: 0, y: 20 },
-          animate: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+        return {
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
         };
     }
   };
 
-  const { initial, animate } = getAnimationProps();
+  const variants = getAnimationVariants(type);
 
   useEffect(() => {
+    if (hasAnimated && once) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && (!once || !hasAnimated.current)) {
-          control.start(animate);
-          hasAnimated.current = true;
-        } else if (!entry.isIntersecting && !once) {
-          control.start(initial);
-          hasAnimated.current = false;
+        if (entry.isIntersecting) {
+          controls.start("visible");
+          setHasAnimated(true);
+          if (once) {
+            observer.disconnect();
+          }
+        } else if (!once) {
+          controls.start("hidden");
         }
       },
-      { 
-        threshold 
-      }
+      { threshold, rootMargin: "0px 0px -100px 0px" }
     );
-    
+
     if (ref.current) {
       observer.observe(ref.current);
     }
-    
+
     return () => {
       if (ref.current) {
         observer.unobserve(ref.current);
       }
     };
-  }, [control, initial, animate, once, threshold]);
+  }, [controls, hasAnimated, once, threshold]);
 
-  return { ref, control, initial };
+  return { 
+    ref, 
+    control: controls,
+    initial: "hidden",
+    animate: "visible",
+    variants
+  };
 }

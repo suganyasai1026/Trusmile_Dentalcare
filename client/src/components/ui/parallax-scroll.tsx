@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface ParallaxLayerProps {
   children: React.ReactNode;
@@ -8,16 +8,33 @@ interface ParallaxLayerProps {
 }
 
 export function ParallaxLayer({ children, offset = 50, className = '' }: ParallaxLayerProps) {
+  const [windowHeight, setWindowHeight] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
   
-  const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
+  useEffect(() => {
+    setWindowHeight(window.innerHeight);
+    
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
+  const { scrollY } = useScroll();
+  const y = useTransform(
+    scrollY,
+    [0, windowHeight],
+    [0, offset]
+  );
+
   return (
-    <motion.div ref={ref} style={{ y }} className={className}>
+    <motion.div
+      ref={ref}
+      style={{ y }}
+      className={className}
+    >
       {children}
     </motion.div>
   );
@@ -42,14 +59,16 @@ export function ParallaxSection({
     offset: ["start end", "end start"]
   });
   
-  const factor = direction === 'up' ? -1 : 1;
-  const y = useTransform(scrollYProgress, [0, 1], [0, 100 * factor * speed]);
-  
+  const yOffset = direction === 'up' ? -100 * speed : 100 * speed;
+  const y = useTransform(scrollYProgress, [0, 1], [yOffset, 0]);
+
   return (
-    <motion.div ref={ref} className={`${className} relative overflow-hidden`}>
-      <motion.div style={{ y }}>
-        {children}
-      </motion.div>
+    <motion.div 
+      ref={ref}
+      style={{ y, position: 'relative' }}
+      className={className}
+    >
+      {children}
     </motion.div>
   );
 }
@@ -66,10 +85,10 @@ interface ParallaxBackgroundProps {
 export function ParallaxBackground({ 
   children, 
   backgroundUrl,
-  className = '', 
-  speed = 0.2,
+  className = '',
+  speed = 0.3,
   overlayColor = '#000',
-  overlayOpacity = 0.3
+  overlayOpacity = 0.5
 }: ParallaxBackgroundProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -77,20 +96,25 @@ export function ParallaxBackground({
     offset: ["start end", "end start"]
   });
   
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', `${speed * 100}%`]);
-  
+  const yBg = useTransform(scrollYProgress, [0, 1], ['0%', `${speed * 100}%`]);
+
   return (
-    <div ref={ref} className={`${className} relative overflow-hidden`}>
+    <div 
+      ref={ref}
+      className={`relative overflow-hidden ${className}`}
+    >
       <motion.div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center -z-10"
-        style={{ 
+        className="absolute inset-0 w-full h-full -z-10"
+        style={{
+          y: yBg,
           backgroundImage: `url(${backgroundUrl})`,
-          y
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
         }}
       />
       <div 
-        className="absolute inset-0 w-full h-full -z-5"
-        style={{ 
+        className="absolute inset-0 w-full h-full -z-10"
+        style={{
           backgroundColor: overlayColor,
           opacity: overlayOpacity
         }}
@@ -102,92 +126,97 @@ export function ParallaxBackground({
   );
 }
 
-// A decoration element that moves at a different speed than the content
-export function FloatingParallaxElement({
-  children,
-  offsetX = 0,
-  offsetY = 0,
-  speed = 2,
-  className = ""
-}: {
+interface FloatingParallaxElementProps {
   children: React.ReactNode;
-  offsetX?: number;
-  offsetY?: number;
-  speed?: number;
   className?: string;
-}) {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 1000], [offsetY, offsetY - 100 * speed]);
-  const x = useTransform(scrollY, [0, 1000], [offsetX, offsetX - 50 * speed]);
+  offset?: number;
+  direction?: 'up' | 'down';
+  transitionDuration?: number;
+}
+
+export function FloatingParallaxElement({
+  children, 
+  className = '',
+  offset = 20,
+  direction = 'up',
+  transitionDuration = 0.5
+}: FloatingParallaxElementProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+  
+  const yValue = direction === 'up' ? -offset : offset;
+  const y = useTransform(scrollYProgress, [0, 1], [yValue, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
 
   return (
-    <motion.div
-      className={`${className} absolute`}
-      style={{ x, y }}
+    <motion.div 
+      ref={ref}
+      style={{ 
+        y,
+        opacity,
+        transition: `all ${transitionDuration}s ease-out`
+      }}
+      className={className}
     >
       {children}
     </motion.div>
   );
 }
 
-// Shapes that can be used with the FloatingParallaxElement
-export function ParallaxShape({
-  shape = "circle",
-  size = 50,
-  color = "rgba(255, 255, 255, 0.2)",
-  className = ""
-}: {
-  shape?: "circle" | "square" | "triangle" | "donut";
+type ShapeType = 'circle' | 'square' | 'triangle' | 'blob';
+
+interface ParallaxShapeProps {
+  type?: ShapeType;
   size?: number;
   color?: string;
+  top?: string | number;
+  left?: string | number;
+  right?: string | number;
+  bottom?: string | number;
+  speed?: number;
   className?: string;
-}) {
-  const shapeStyles: { [key: string]: React.ReactNode } = {
-    circle: (
-      <div
-        className={`rounded-full ${className}`}
-        style={{
-          width: size,
-          height: size,
-          backgroundColor: color
-        }}
-      />
-    ),
-    square: (
-      <div
-        className={`${className}`}
-        style={{
-          width: size,
-          height: size,
-          backgroundColor: color,
-          transform: "rotate(45deg)"
-        }}
-      />
-    ),
-    triangle: (
-      <div
-        className={`${className}`}
-        style={{
-          width: 0,
-          height: 0,
-          borderLeft: `${size / 2}px solid transparent`,
-          borderRight: `${size / 2}px solid transparent`,
-          borderBottom: `${size}px solid ${color}`
-        }}
-      />
-    ),
-    donut: (
-      <div
-        className={`rounded-full ${className}`}
-        style={{
-          width: size,
-          height: size,
-          backgroundColor: "transparent",
-          border: `${size / 10}px solid ${color}`,
-        }}
-      />
-    )
-  };
+}
 
-  return <>{shapeStyles[shape]}</>;
+export function ParallaxShape({
+  type = 'circle',
+  size = 100,
+  color = 'rgba(255, 255, 255, 0.1)',
+  top,
+  left,
+  right,
+  bottom,
+  speed = 2,
+  className = ''
+}: ParallaxShapeProps) {
+  const shapes: Record<ShapeType, string> = {
+    circle: 'rounded-full',
+    square: 'rounded-none',
+    triangle: 'triangle',
+    blob: 'blob',
+  };
+  
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, speed * 100]);
+  
+  return (
+    <motion.div
+      ref={ref}
+      style={{
+        width: size,
+        height: size,
+        backgroundColor: color,
+        position: 'absolute',
+        top,
+        left,
+        right,
+        bottom,
+        y,
+      }}
+      className={`${shapes[type]} ${className}`}
+    />
+  );
 }

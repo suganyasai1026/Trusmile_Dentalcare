@@ -1,35 +1,40 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-type FloatingAnimationProps = {
+type AnimationProps = {
   children: React.ReactNode;
   duration?: number;
   delay?: number;
-  yOffset?: number;
   className?: string;
+};
+
+type FloatingAnimationProps = AnimationProps & {
+  yOffset?: number;
+};
+
+type PulseAnimationProps = AnimationProps & {
+  scale?: number;
 };
 
 export function FloatingAnimation({
   children,
-  duration = 3,
+  duration = 4,
   delay = 0,
   yOffset = 15,
   className = '',
 }: FloatingAnimationProps) {
-  const floatingAnimation = {
-    y: [0, -yOffset, 0],
-    transition: {
-      duration,
-      ease: "easeInOut",
-      repeat: Infinity,
-      delay
-    }
-  };
-
   return (
     <motion.div
-      animate={floatingAnimation}
       className={className}
+      initial={{ y: 0 }}
+      animate={{ y: [-yOffset/2, yOffset/2, -yOffset/2] }}
+      transition={{
+        duration: duration,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut",
+        delay: delay,
+      }}
     >
       {children}
     </motion.div>
@@ -42,21 +47,20 @@ export function PulseAnimation({
   delay = 0,
   scale = 1.05,
   className = '',
-}: Omit<FloatingAnimationProps, 'yOffset'> & { scale?: number }) {
-  const pulseAnimation = {
-    scale: [1, scale, 1],
-    transition: {
-      duration,
-      ease: "easeInOut",
-      repeat: Infinity,
-      delay
-    }
-  };
-
+}: PulseAnimationProps) {
   return (
     <motion.div
-      animate={pulseAnimation}
       className={className}
+      animate={{ 
+        scale: [1, scale, 1],
+      }}
+      transition={{
+        duration: duration,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut",
+        delay: delay,
+      }}
     >
       {children}
     </motion.div>
@@ -67,23 +71,20 @@ export function RotateAnimation({
   children,
   duration = 20,
   delay = 0,
-  rotation = 360,
   className = '',
-}: Omit<FloatingAnimationProps, 'yOffset'> & { rotation?: number }) {
-  const rotateAnimation = {
-    rotate: [0, rotation],
-    transition: {
-      duration,
-      ease: "linear",
-      repeat: Infinity,
-      delay
-    }
-  };
-
+}: AnimationProps) {
   return (
     <motion.div
-      animate={rotateAnimation}
       className={className}
+      animate={{ 
+        rotate: [0, 360],
+      }}
+      transition={{
+        duration: duration,
+        repeat: Infinity,
+        ease: "linear",
+        delay: delay,
+      }}
     >
       {children}
     </motion.div>
@@ -92,27 +93,24 @@ export function RotateAnimation({
 
 export function BlinkAnimation({
   children,
-  duration = 3,
+  duration = 2,
   delay = 0,
   className = '',
-  intensity = 0.4,
-}: Omit<FloatingAnimationProps, 'yOffset'> & { intensity?: number }) {
-  const blinkAnimation = {
-    opacity: [1, intensity, 1],
-    transition: {
-      duration,
-      ease: "easeInOut",
-      repeat: Infinity,
-      delay
-    }
-  };
-
+}: AnimationProps) {
   return (
-    <motion.div
-      animate={blinkAnimation}
+    <motion.span
       className={className}
+      animate={{ 
+        opacity: [1, 0.3, 1],
+      }}
+      transition={{
+        duration: duration,
+        repeat: Infinity,
+        ease: "easeInOut",
+        delay: delay,
+      }}
     >
       {children}
-    </motion.div>
+    </motion.span>
   );
 }
