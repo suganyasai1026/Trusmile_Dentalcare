@@ -105,22 +105,22 @@ export default function About() {
           >
             <div className="relative">
               <motion.img 
-                src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                src="/clinic.jpg" 
                 alt="State-of-the-art dental clinic interior"
-                className="rounded-xl shadow-xl w-full h-auto"
+                className="rounded-xl shadow-xl w-full h-[500px]"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               />
               
-              <div className="absolute -bottom-10 -left-10 hidden md:block">
+              {/* <div className="absolute -bottom-10 -left-10 hidden md:block">
                 <FloatingAnimation yOffset={10} duration={4}>
                   <img 
-                    src="https://pixabay.com/get/g3939d19c18b39052f53bb99684c7a452421a8683ad6cc81270e509cd8d67246035c560e802ad0b72b8ac45c4c7537c042d5b94394424520791dbd3f729ee7694_1280.jpg" 
+                    src="clinic1.jpg" 
                     alt="Advanced dental technology"
-                    className="rounded-xl shadow-xl w-48 h-auto border-4 border-white"
+                    className="rounded-xl shadow-xl w-48 h-48 border-4 border-white"
                   />
                 </FloatingAnimation>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>

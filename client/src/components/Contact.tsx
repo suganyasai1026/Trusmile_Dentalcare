@@ -127,6 +127,7 @@ export default function Contact() {
                 </motion.a>
                 <motion.a
                   href="https://www.instagram.com/trusmiledentalhyd?igsh=YTFmY3ppbGd4Mm5r"
+                  target="_blank"
                   className="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-[hsl(var(--skyblue))] transition-colors"
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}

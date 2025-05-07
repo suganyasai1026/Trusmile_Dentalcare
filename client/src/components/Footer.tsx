@@ -23,7 +23,7 @@ export default function Footer() {
               <a href="#" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com/trusmiledentalhyd?igsh=YTFmY3ppbGd4Mm5r" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">
+              <a href="https://www.instagram.com/trusmiledentalhyd?igsh=YTFmY3ppbGd4Mm5r" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors" target="_blank">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">
