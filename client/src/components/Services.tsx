@@ -112,7 +112,24 @@ export default function Services() {
               transition={{ delay: 0.2 }}
             >
               <BeforeAfterSlider
-                beforeImage="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                beforeImage="/before-1.jpg"
+                afterImage="/after-1.jpg"
+                beforeLabel="Before Treatment"
+                afterLabel="After Treatment"
+                className="mb-8"
+              />
+              <BeforeAfterSlider
+                beforeImage="/before-2.jpg"
+                afterImage="/after-2.jpg"
+                beforeLabel="Before Alignment"
+                afterLabel="After Alignment"
+                className="mb-8"
+              />
+              <BeforeAfterSlider
+                beforeImage="/before-3.jpg"
+                afterImage="/after-3.jpg"
+                beforeLabel="Before Whitening"
+                afterLabel="After Whitening"
                 afterImage="https://images.unsplash.com/photo-1581700155256-8aeef80b24f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 beforeLabel="Before Treatment"
                 afterLabel="After Treatment"

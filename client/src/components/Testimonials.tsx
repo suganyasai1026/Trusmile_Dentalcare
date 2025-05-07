@@ -48,7 +48,7 @@ export default function Testimonials() {
   return (
     <section 
       id="testimonials" 
-      className="py-16 md:py-24 bg-white relative"
+      className="py-16 md:py-24 bg-white relative min-h-screen"
       ref={ref}
     >
       {/* Decorative elements */}
