@@ -48,8 +48,9 @@ export default function Testimonials() {
   return (
     <section 
       id="testimonials" 
-      className="py-16 md:py-24 bg-white relative min-h-screen"
+      className="py-16 md:py-24 bg-white relative min-h-screen overflow-hidden"
       ref={ref}
+      style={{ position: 'relative' }}
     >
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-[hsl(var(--skyblue))] rounded-full opacity-5 -mr-16 -mt-16"></div>
