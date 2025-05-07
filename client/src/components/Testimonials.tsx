@@ -50,8 +50,8 @@ export default function Testimonials() {
       className="py-16 md:py-24 bg-white"
       style={{ position: 'relative', minHeight: '600px' }}
     >
-      <div className="absolute top-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-[hsl(var(--skyblue))] rounded-full opacity-5 -mr-16 -mt-16"></div>
-      <div className="absolute bottom-0 left-0 w-32 h-32 md:w-64 md:h-64 bg-[hsl(var(--deepblue))] rounded-full opacity-5 -ml-16 -mb-16"></div>
+      {/* <div className="absolute top-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-[hsl(var(--skyblue))] rounded-full opacity-5 -mr-16 -mt-16"></div>
+      <div className="absolute bottom-0 left-0 w-32 h-32 md:w-64 md:h-64 bg-[hsl(var(--deepblue))] rounded-full opacity-5 -ml-16 -mb-16"></div> */}
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
