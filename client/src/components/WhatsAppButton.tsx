@@ -6,7 +6,7 @@ import { PulseAnimation } from './ui/floating-animation';
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const phoneNumber = "+123456789"; // Replace with your clinic's WhatsApp number
+  const phoneNumber = "7659077707"; // Replace with your clinic's WhatsApp number
   
   // Show the button after scrolling a bit
   useEffect(() => {
@@ -24,7 +24,9 @@ export default function WhatsAppButton() {
   }, []);
   
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hello! I'd like to schedule a dental appointment.");
+    const message = encodeURIComponent(
+      `Book an Appointment\nWe’d love to see your smile! Whether it’s a routine check-up, braces consultation, or aligner fitting—our team at Trusmile Dental Care is here for you.`
+    );
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
   

@@ -33,6 +33,27 @@ export default function Team() {
       position: "Cosmetic Dentistry Expert",
       bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
       image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+    },
+    {
+      id: 4,
+      name: "Dr. Emily Rodriguez",
+      position: "Cosmetic Dentistry Expert",
+      bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
+      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+    },
+    {
+      id: 5,
+      name: "Dr. Emily Rodriguez",
+      position: "Cosmetic Dentistry Expert",
+      bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
+      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+    },
+    {
+      id: 6,
+      name: "Dr. Emily Rodriguez",
+      position: "Cosmetic Dentistry Expert",
+      bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
+      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
     }
   ];
   
@@ -76,7 +97,7 @@ export default function Team() {
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className="w-full h-80 object-cover object-center transition-transform duration-500 group-hover:scale-105" 
+                    className="w-full h-80 object-contain object-center transition-transform duration-500 group-hover:scale-105" 
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[hsl(var(--deepblue-dark))] to-transparent h-1/3 opacity-70"></div>
                 </div>
@@ -84,21 +105,21 @@ export default function Team() {
                   <h3 className="text-xl font-semibold text-[hsl(var(--deepblue))]">{member.name}</h3>
                   <p className="text-[hsl(var(--skyblue))] mb-3">{member.position}</p>
                   <p className="text-gray-600 mb-4">{member.bio}</p>
-                  <div className="flex space-x-3">
+                  {/* <div className="flex space-x-3">
                     <a href="#" className="text-gray-500 hover:text-[hsl(var(--skyblue))] transition-colors">
                       <Linkedin className="h-5 w-5" />
                     </a>
                     <a href="#" className="text-gray-500 hover:text-[hsl(var(--skyblue))] transition-colors">
                       <Twitter className="h-5 w-5" />
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             </ParallaxSection>
           ))}
         </div>
         
-        <div ref={buttonAnimation.ref} className="mt-12 text-center">
+        {/* <div ref={buttonAnimation.ref} className="mt-12 text-center">
           <motion.div
             initial={buttonAnimation.initial}
             animate={buttonAnimation.control}
@@ -112,7 +133,7 @@ export default function Team() {
               Meet All Specialists <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
           </motion.div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -125,17 +125,8 @@ export default function Services() {
                 afterLabel="After Alignment"
                 className="mb-8"
               />
-              <BeforeAfterSlider
-                beforeImage="/before-3.jpg"
-                afterImage="/after-3.jpg"
-                beforeLabel="Before Whitening"
-                afterLabel="After Whitening"
-                afterImage="https://images.unsplash.com/photo-1581700155256-8aeef80b24f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                beforeLabel="Before Treatment"
-                afterLabel="After Treatment"
-                className="shadow-xl"
-              />
-              <p className="text-center mt-4 font-medium text-[hsl(var(--deepblue))]">Cosmetic Dental Veneers</p>
+            
+              <p className="text-center mt-4 font-medium text-[hsl(var(--deepblue))]">Dental Implants</p>
             </motion.div>
             
             <motion.div
@@ -143,12 +134,21 @@ export default function Services() {
               animate={sliderAnimation.control}
               transition={{ delay: 0.4 }}
             >
+                <BeforeAfterSlider
+                beforeImage="/before-3.jpg"
+                // afterImage="/after-3.jpg"
+                // beforeLabel="Before Whitening"
+                // afterLabel="After Whitening"
+                afterImage="https://images.unsplash.com/photo-1581700155256-8aeef80b24f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                beforeLabel="Before Treatment"
+                afterLabel="After Treatment"
+                className="mb-8 shadow-xl"             />
               <BeforeAfterSlider
                 beforeImage="https://images.unsplash.com/photo-1588776814546-354a499c2d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 afterImage="https://images.unsplash.com/photo-1607429081668-39e1c5746f1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 beforeLabel="Before Aligner"
                 afterLabel="After Aligner"
-                className="shadow-xl"
+                className="mb-8 shadow-xl"
               />
               <p className="text-center mt-4 font-medium text-[hsl(var(--deepblue))]">In-House Aligners</p>
             </motion.div>

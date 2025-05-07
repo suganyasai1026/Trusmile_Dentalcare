@@ -70,7 +70,7 @@ export default function Hero() {
   
   // Animated text for the heading
   const title = "Expert Dental Care for Your Perfect Smile";
-  const titleArray = title.split("");
+  const titleArray = title.split(" ");
 
   return (
     <section 
@@ -118,7 +118,7 @@ export default function Hero() {
             className="w-full md:w-1/2 text-white mb-10 md:mb-0"
           >
             <div className="overflow-hidden">
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4 flex flex-wrap">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4 flex flex-wrap gap-3">
                 {titleArray.map((letter, index) => (
                   <motion.span
                     key={index}
@@ -149,9 +149,10 @@ export default function Hero() {
             >
               <span className="inline-flex items-center">
                 <BlinkAnimation intensity={0.7} duration={4}>
-                  <span className="text-[hsl(var(--skyblue))]">Specialists</span>
+                  <span className="text-[hsl(var(--skyblue))] font-bold">World's First</span>
                 </BlinkAnimation>
-              </span> in advanced root canal treatments and innovative dental solutions.
+              </span> Direct Print Aliner Resin Powered  By Graphy and Specialists
+              in advanced root canal treatments and innovative dental solutions.
             </motion.p>
             
             <motion.div 

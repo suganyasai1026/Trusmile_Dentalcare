@@ -22,8 +22,8 @@ export const services = [
   },
   {
     id: 3,
-    title: "Cosmetic Dentistry",
-    description: "Transform your smile with our comprehensive cosmetic procedures including veneers, whitening, bonding, and smile makeovers tailored to your desires.",
+    title: "Dental Implants",
+    description: "Transform your smile with our comprehensive Dental Implants procedures including veneers, whitening, bonding, and smile makeovers tailored to your desires.",
     icon: "face-smile",
     image: "https://pixabay.com/get/gb20362e15fa0f34fcf44542e6f5418adc03f4817ff2cb9ed502ba4eb73859c72b8716c64a9df5772cf8edd50875e46ad75df4cc237274ac4a812f85d5940c2d7_1280.jpg"
   },
@@ -36,7 +36,7 @@ export const services = [
   },
   {
     id: 5,
-    title: "Preventive Care",
+    title: "Braces",
     description: "Comprehensive check-ups, cleanings, and preventive treatments to maintain your oral health and detect potential issues before they become serious problems.",
     icon: "shield-halved",
     image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
@@ -47,28 +47,63 @@ export const services = [
     description: "Specialized gentle care for children in a friendly environment designed to make dental visits fun and stress-free while promoting lifelong oral health habits.",
     icon: "child",
     image: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
-  }
+  },
+  {
+    id: 7,
+    title: "Teeth Whitening",
+    description: "Comprehensive check-ups, cleanings, and preventive treatments to maintain your oral health and detect potential issues before they become serious problems.",
+    icon: "shield-halved",
+    image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+  },
+  {
+    id: 8,
+    title: "Smile Design",
+    description: "Comprehensive check-ups, cleanings, and preventive treatments to maintain your oral health and detect potential issues before they become serious problems.",
+    icon: "shield-halved",
+    image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+  },
 ];
 
 export const teamMembers = [
   {
     id: 1,
-    name: "Dr. Sarah Johnson",
-    position: "Root Canal Specialist",
-    bio: "With over 15 years of experience, Dr. Johnson is a leading expert in painless root canal procedures and complex dental surgeries.",
+    name: "Dr. G. Adityanarayana ",
+    position: "Orthodontist and Cosmetic Dentist",
+    bio: "Specializing in smile transformations, Dr. Adityanarayana combines artistic vision with technical precision for stunning cosmetic results..",
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
   },
   {
     id: 2,
-    name: "Dr. Michael Chen",
-    position: "Chief Dental Surgeon",
-    bio: "Dr. Chen pioneered our in-house aligner technology and specializes in complex reconstructive dental procedures with minimal recovery time.",
+    name: "Dr. G. Sai Jyothsna",
+    position: "Periodontist and Implantologist ",
+    bio: "Dr. Sai Jyothsna our in-house aligner technology and specializes in complex reconstructive dental procedures with minimal recovery time.",
     image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
   },
   {
     id: 3,
-    name: "Dr. Emily Rodriguez",
-    position: "Cosmetic Dentistry Expert",
+    name: "Dr. Rakesh C",
+    position: "Endodontist",
+    bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
+    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+  },
+  {
+    id: 4,
+    name: "Dr. Charan Reddy ,",
+    position: "Oral and Maxillofacial Surgeon ",
+    bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
+    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+  },
+  {
+    id: 5,
+    name: "Dr. Anil kumar",
+    position: "Prosthodontist",
+    bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
+    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+  },
+  {
+    id: 6,
+    name: "Dr.Sreeja Reddy",
+    position: "Pedodontist",
     bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
     image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
   }

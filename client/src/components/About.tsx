@@ -41,7 +41,7 @@ export default function About() {
               Pioneering Excellence in Dental Care
             </h3>
             <p className="mb-4 text-gray-700">
-              At DentalCare, we combine innovative technology with expert knowledge to provide unparalleled dental services. 
+              At TruSmile DentalCare, we combine innovative technology with expert knowledge to provide unparalleled dental services. 
               Our state-of-the-art facility is designed to ensure comfort and efficiency in every procedure.
             </p>
             

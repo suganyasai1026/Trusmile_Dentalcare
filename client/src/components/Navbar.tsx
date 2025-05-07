@@ -45,18 +45,18 @@ export default function Navbar() {
     <header 
       className={cn(
         "fixed w-full bg-white z-50 transition-all duration-300",
-        scrolled ? "shadow-md py-2" : "py-3 md:py-4"
+        scrolled ? "shadow-md py-4" : "py-3 md:py-6"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
             <span className="text-[hsl(var(--deepblue))] font-bold text-2xl">
-              Dental<span className="text-[hsl(var(--skyblue))]">Care</span>
+              TruSmile<span className="text-[hsl(var(--skyblue))]">DentalCare</span>
             </span>
           </Link>
           
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -70,7 +70,7 @@ export default function Navbar() {
           
           <button
             onClick={toggleMenu}
-            className="md:hidden text-gray-700 hover:text-[hsl(var(--skyblue))] focus:outline-none"
+            className="lg:hidden text-gray-700 hover:text-[hsl(var(--skyblue))] focus:outline-none"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -78,7 +78,7 @@ export default function Navbar() {
         </div>
         
         {isOpen && (
-          <div className="md:hidden py-4 bg-white border-t animate-fade-in">
+          <div className="lg:hidden py-4 bg-white border-t animate-fade-in">
             {navLinks.map((link) => (
               <a
                 key={link.name}

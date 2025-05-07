@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter, Linkedin, MapPin, Phone, Mail } from "luc
 import { formatPhoneNumber } from "@/lib/utils";
 
 export default function Footer() {
-  const phoneNumber = "1234567890";
+  const phoneNumber = "+91 7659077707";
   const formattedPhone = formatPhoneNumber(phoneNumber);
 
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <div className="mb-6">
               <span className="text-white font-bold text-2xl">
-                Dental<span className="text-[hsl(var(--skyblue))]">Care</span>
+               TruSmile <span className="text-[hsl(var(--skyblue))]">DentalCare</span>
               </span>
             </div>
             <p className="text-gray-400 mb-6">
@@ -23,7 +23,7 @@ export default function Footer() {
               <a href="#" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">
+              <a href="https://www.instagram.com/trusmiledentalhyd?igsh=YTFmY3ppbGd4Mm5r" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">
@@ -52,10 +52,11 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><a href="#services" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">Root Canal Treatment</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">In-House Aligners</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">Cosmetic Dentistry</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">Dental Implants</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">Dental Surgery</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">Preventive Care</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">Braces</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">Pediatric Dentistry</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">Teeth Whitening</a></li><li><a href="#services" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">Smile Design</a></li>
             </ul>
           </div>
           
@@ -64,22 +65,22 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mt-1 mr-3 text-[hsl(var(--skyblue))]" />
-                <span>123 Dental Avenue, Medical District<br />New York, NY 10001</span>
+                First floor, H.No:8-1-284/OU/116,<br /> Manikonda Rd, opposite to Value vision,<br /> OU Colony, Shaikpet,<br /> Hyderabad, Telangana 500008
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-[hsl(var(--skyblue))]" />
                 <span>{formattedPhone}</span>
               </li>
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-[hsl(var(--skyblue))]" />
-                {/* <span>appointments@dentalcare.com</span> */}
-              </li>
+                <span>appointments@dentalcare.com</span>
+              </li> */}
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500">
-          <p>&copy; {new Date().getFullYear()} DentalCare Specialists. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} TruSmileDentalCare Specialists. All rights reserved.</p>
         </div>
       </div>
     </footer>
