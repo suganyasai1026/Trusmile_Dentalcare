@@ -72,13 +72,13 @@ export default function Testimonials() {
                 }`}
               >
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">
-                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden flex-shrink-0">
+                  {/* <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden flex-shrink-0">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name}
                       className="w-full h-full object-cover" 
                     />
-                  </div>
+                  </div> */}
                   <div className="flex-grow">
                     <StarRating rating={testimonial.rating} />
                     <p className="text-lg md:text-xl text-gray-700 italic mb-6">"{testimonial.quote}"</p>

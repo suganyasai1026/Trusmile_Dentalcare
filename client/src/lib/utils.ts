@@ -11,56 +11,56 @@ export const services = [
     title: "Expert Root Canal",
     description: "Our specialists use advanced techniques to make root canal treatments painless and effective, preserving your natural teeth with minimal discomfort.",
     icon: "tooth",
-    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+    image: "rootcanel.jpg"
   },
   {
     id: 2,
     title: "In-House Aligners",
     description: "World's first clinic with proprietary in-house aligner technology, providing faster, more comfortable, and precisely customized teeth straightening.",
     icon: "wand-magic-sparkles",
-    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+    image: "inhouse_aligners.jpeg"
   },
   {
     id: 3,
     title: "Dental Implants",
     description: "Transform your smile with our comprehensive Dental Implants procedures including veneers, whitening, bonding, and smile makeovers tailored to your desires.",
     icon: "face-smile",
-    image: "https://pixabay.com/get/gb20362e15fa0f34fcf44542e6f5418adc03f4817ff2cb9ed502ba4eb73859c72b8716c64a9df5772cf8edd50875e46ad75df4cc237274ac4a812f85d5940c2d7_1280.jpg"
+    image: "dental-implants.jpeg"
   },
   {
     id: 4,
     title: "Dental Surgery",
     description: "Our experienced surgeons specialize in complex dental procedures including extractions, implants, and reconstructive surgery with a focus on minimizing recovery time.",
     icon: "user-doctor",
-    image: "https://pixabay.com/get/g665a51925312f0501e770734a1134d1b8a2226320e803798561ccd4bc754fb31124539cad6e6a1d62c6e3302b4fe9407d1e23f207a9b5726881d1363c7c0d82d_1280.jpg"
+    image: "sd.jpeg"
   },
   {
     id: 5,
     title: "Braces",
     description: "Comprehensive check-ups, cleanings, and preventive treatments to maintain your oral health and detect potential issues before they become serious problems.",
     icon: "shield-halved",
-    image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+    image: "dental-braces.jpg"
   },
   {
     id: 6,
     title: "Pediatric Dentistry",
     description: "Specialized gentle care for children in a friendly environment designed to make dental visits fun and stress-free while promoting lifelong oral health habits.",
     icon: "child",
-    image: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+    image: "pd.jpeg"
   },
   {
     id: 7,
     title: "Teeth Whitening",
     description: "Comprehensive check-ups, cleanings, and preventive treatments to maintain your oral health and detect potential issues before they become serious problems.",
     icon: "shield-halved",
-    image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+    image: "images.jpeg"
   },
   {
     id: 8,
     title: "Smile Design",
     description: "Comprehensive check-ups, cleanings, and preventive treatments to maintain your oral health and detect potential issues before they become serious problems.",
     icon: "shield-halved",
-    image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+    image: "sd.jpeg"
   },
 ];
 
@@ -91,7 +91,7 @@ export const teamMembers = [
     name: "Dr. Charan Reddy ,",
     position: "Oral and Maxillofacial Surgeon ",
     bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+    image: "/charan.jpg"
   },
   {
     id: 5,
@@ -112,27 +112,27 @@ export const teamMembers = [
 export const testimonials = [
   {
     id: 1,
-    name: "Jennifer Smith",
+    name: "Shiva Krishna Vishwanatham",
     position: "Root Canal Patient",
-    quote: "I was terrified of root canal treatments until I visited DentalCare. Dr. Johnson made the entire process completely painless and comfortable. The results have been incredible, and I can't thank them enough!",
+    quote: "Dr. Jyothsna and Dr. Aditya are truly masters of their craft—extremely knowledgeable, gentle, and incredibly patient. They took the time to thoroughly explain the procedure, easing all our concerns, and ensured my mother was comfortable throughout. Despite her initial anxiety, she felt completely at ease, thanks to their reassuring approach.The clinic itself is state-of-the-art, impeccably clean, and well-equipped with the latest technology. Appointments were well-managed, and we never had to wait long.Most importantly, the procedure was performed with such precision and care that my mother experienced minimal discomfort and is now recovering beautifully. It’s rare to find dentists who combine technical expertise with such compassion.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+    image: ""
   },
   {
     id: 2,
-    name: "Robert Johnson",
-    position: "Aligner Patient",
-    quote: "The in-house aligner technology here is truly revolutionary. My teeth straightening journey has been faster and more comfortable than I ever expected. The personalized attention from Dr. Chen made all the difference.",
+    name: "Shreesh Basatwar",
+    position: " implants done",
+    quote: "Thanks to Dr. Jyotsna and Dr. Aditya, my mother and I are both now enjoying restored smiles with implants that look and feel completely natural. I highly recommend Trusmile Dental Clinic to anyone in need of quality dental care. It’s clear that the team here genuinely cares about their patients' well-being and goes above and beyond to ensure top-notch results. Thank you, Trusmile, for giving us the smile of our dreams!",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+    image: ""
   },
   {
     id: 3,
-    name: "Sarah Martinez",
-    position: "Cosmetic Dentistry Patient",
-    quote: "Dr. Rodriguez transformed my smile completely! Her artistic approach to cosmetic dentistry gave me results beyond my expectations. I now smile with complete confidence and receive compliments all the time.",
+    name: "Sreedevi Peddireddy",
+    position: "braces and alignment treatment",
+    quote: "What really stood out was Adithya's ability to listen to our concerns and answer all our questions. They took the time to explain everything in a way that was easy to understand, and made sure we were comfortable with the treatment plan.I would highly recommend Adithya name to anyone looking for orthodontic treatment. They are truly exceptional, and we feel lucky to have found them. Thank you Adithya , for giving my son a beautiful, smile!!",
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+    image: ""
   }
 ];
 

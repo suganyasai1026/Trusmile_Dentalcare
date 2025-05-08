@@ -112,21 +112,21 @@ export default function Services() {
               transition={{ delay: 0.2 }}
             >
               <BeforeAfterSlider
-                beforeImage="/before-1.jpg"
-                afterImage="/after-1.jpg"
+                beforeImage="/patient1.jpg"
+                afterImage="/patient1_2.jpg"
                 beforeLabel="Before Treatment"
                 afterLabel="After Treatment"
                 className="mb-8"
               />
               <BeforeAfterSlider
-                beforeImage="/before-2.jpg"
-                afterImage="/after-2.jpg"
+                beforeImage="/patient2.jpg"
+                afterImage="/patient2_2.jpg"
                 beforeLabel="Before Alignment"
                 afterLabel="After Alignment"
                 className="mb-8"
               />
             
-              <p className="text-center mt-4 font-medium text-[hsl(var(--deepblue))]">Dental Implants</p>
+              {/* <p className="text-center mt-4 font-medium text-[hsl(var(--deepblue))]">Dental Implants</p> */}
             </motion.div>
             
             <motion.div
@@ -135,22 +135,67 @@ export default function Services() {
               transition={{ delay: 0.4 }}
             >
                 <BeforeAfterSlider
-                beforeImage="/before-3.jpg"
+                beforeImage="/patient3.jpg"
                 // afterImage="/after-3.jpg"
                 // beforeLabel="Before Whitening"
                 // afterLabel="After Whitening"
-                afterImage="https://images.unsplash.com/photo-1581700155256-8aeef80b24f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                afterImage="/patient3_2.jpg"
                 beforeLabel="Before Treatment"
                 afterLabel="After Treatment"
                 className="mb-8 shadow-xl"             />
               <BeforeAfterSlider
+                beforeImage="/patient4.jpg"
+                afterImage="/patient4_2.jpg"
+                beforeLabel="Before Aligner"
+                afterLabel="After Aligner"
+                className="mb-8 shadow-xl"
+              />
+            </motion.div>
+            <motion.div
+              initial={sliderAnimation.initial}
+              animate={sliderAnimation.control}
+              transition={{ delay: 0.4 }}
+            >
+                <BeforeAfterSlider
+                beforeImage="/patient5.jpg"
+                // afterImage="/after-3.jpg"
+                // beforeLabel="Before Whitening"
+                // afterLabel="After Whitening"
+                afterImage="/patient5_2.jpg"
+                beforeLabel="Before Treatment"
+                afterLabel="After Treatment"
+                className="mb-8 shadow-xl"  />
+              <BeforeAfterSlider
+                beforeImage="/patient7.jpg"
+                afterImage="/patient7_2.jpg"
+                beforeLabel="Before Aligner"
+                afterLabel="After Aligner"
+                className="mb-8 shadow-xl"
+              />
+              {/* <p className="text-center mt-4 font-medium text-[hsl(var(--deepblue))]">In-House Aligners</p> */}
+            </motion.div>
+            <motion.div
+              initial={sliderAnimation.initial}
+              animate={sliderAnimation.control}
+              transition={{ delay: 0.4 }}
+            >
+                <BeforeAfterSlider
+                beforeImage="/patient6.jpg"
+                // afterImage="/after-3.jpg"
+                // beforeLabel="Before Whitening"
+                // afterLabel="After Whitening"
+                afterImage="/patient6_2.jpg"
+                beforeLabel="Before Treatment"
+                afterLabel="After Treatment"
+                className="mb-8 shadow-xl"             />
+              {/* <BeforeAfterSlider
                 beforeImage="https://images.unsplash.com/photo-1588776814546-354a499c2d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 afterImage="https://images.unsplash.com/photo-1607429081668-39e1c5746f1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 beforeLabel="Before Aligner"
                 afterLabel="After Aligner"
                 className="mb-8 shadow-xl"
-              />
-              <p className="text-center mt-4 font-medium text-[hsl(var(--deepblue))]">In-House Aligners</p>
+              /> */}
+              {/* <p className="text-center mt-4 font-medium text-[hsl(var(--deepblue))]">In-House Aligners</p> */}
             </motion.div>
           </div>
         </div>

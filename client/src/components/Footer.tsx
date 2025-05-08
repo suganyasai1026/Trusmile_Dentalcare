@@ -20,18 +20,18 @@ export default function Footer() {
               Providing exceptional dental care with cutting-edge technology and a compassionate approach.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">
+              <a href="https://www.facebook.com/share/16SrVuP834/" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors" target="_blank">
                 <Facebook className="h-5 w-5" />
               </a>
               <a href="https://www.instagram.com/trusmiledentalhyd?igsh=YTFmY3ppbGd4Mm5r" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors" target="_blank">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">
+              {/* <a href="#" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-[hsl(var(--skyblue))] transition-colors">
                 <Linkedin className="h-5 w-5" />
-              </a>
+              </a> */}
             </div>
           </div>
           

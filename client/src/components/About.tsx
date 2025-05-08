@@ -112,15 +112,15 @@ export default function About() {
                 transition={{ duration: 0.3 }}
               />
               
-              {/* <div className="absolute -bottom-10 -left-10 hidden md:block">
+              <div className="absolute -bottom-10 -left-10 hidden md:block">
                 <FloatingAnimation yOffset={10} duration={4}>
                   <img 
-                    src="clinic1.jpg" 
+                    src="logo.jpg" 
                     alt="Advanced dental technology"
                     className="rounded-xl shadow-xl w-48 h-48 border-4 border-white"
                   />
                 </FloatingAnimation>
-              </div> */}
+              </div>
             </div>
           </motion.div>
         </div>

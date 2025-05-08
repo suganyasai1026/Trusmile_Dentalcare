@@ -79,7 +79,7 @@ export default function Hero() {
       className="pt-20 md:pt-32 pb-28 md:pb-36 relative overflow-hidden min-h-screen flex items-center"
     >
       {/* Floating decoration elements */}
-      <FloatingParallaxElement className="hidden lg:block" offsetX={100} offsetY={100} speed={1}>
+      {/* <FloatingParallaxElement className="hidden lg:block" offsetX={100} offsetY={100} speed={1}>
         <ParallaxShape shape="circle" size={80} color="rgba(191, 219, 254, 0.2)" />
       </FloatingParallaxElement>
       
@@ -89,13 +89,13 @@ export default function Hero() {
       
       <FloatingParallaxElement className="hidden lg:block" offsetX={200} offsetY={500} speed={2}>
         <ParallaxShape shape="triangle" size={60} color="rgba(191, 219, 254, 0.2)" />
-      </FloatingParallaxElement>
+      </FloatingParallaxElement> */}
       
       {/* Hero background with overlay */}
       <motion.div 
         className="absolute inset-0 bg-cover bg-center z-0" 
         style={{ 
-          backgroundImage: "url('https://pixabay.com/get/ga49f576c3f064d0924815e51dbcca06e07cf5c2b35a6f0305cd1ade951e971fbbfb108a52961f41b064cb5b64f76c35e93c3fe185febff62a694bb51a129630a_1280.jpg')",
+          backgroundImage: "url('/clinic3.jpg')",
           y: useTransform(scrollYProgress, [0, 1], ["0%", "20%"]),
           filter: "brightness(0.9)"
         }}
@@ -148,7 +148,7 @@ export default function Hero() {
               variants={itemVariants}
             >
               <span className="inline-flex items-center">
-                <BlinkAnimation intensity={0.7} duration={4}>
+                <BlinkAnimation  duration={4}>
                   <span className="text-[hsl(var(--skyblue))] font-bold">World's First</span>
                 </BlinkAnimation>
               </span> Direct Print Aliner Resin Powered  By Graphy and Specialists

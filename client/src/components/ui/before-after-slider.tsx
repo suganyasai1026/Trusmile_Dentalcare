@@ -69,7 +69,7 @@ export function BeforeAfterSlider({
     <div 
       ref={containerRef}
       className={`relative w-full overflow-hidden rounded-xl shadow-lg cursor-ew-resize ${className}`}
-      style={{ aspectRatio: '4/3' }}
+      style={{ aspectRatio: '6/3' }}
       onMouseDown={handleMouseDown}
       onTouchStart={handleMouseDown}
     >

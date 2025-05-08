@@ -118,7 +118,8 @@ export default function Contact() {
               <h3 className="text-2xl font-semibold mb-6">Follow Us</h3>
               <div className="flex flex-wrap gap-3 sm:gap-4">
                 <motion.a
-                  href="#"
+                  href="https://www.facebook.com/share/16SrVuP834/"
+                  target="_blank"
                   className="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-[hsl(var(--skyblue))] transition-colors"
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -134,7 +135,7 @@ export default function Contact() {
                 >
                   <Instagram className="h-5 w-5" />
                 </motion.a>
-                <motion.a
+                {/* <motion.a
                   href="#"
                   className="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-[hsl(var(--skyblue))] transition-colors"
                   whileHover={{ scale: 1.1 }}
@@ -149,7 +150,7 @@ export default function Contact() {
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
                   <Linkedin className="h-5 w-5" />
-                </motion.a>
+                </motion.a> */}
               </div>
             </div>
           </motion.div>
