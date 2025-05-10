@@ -260,7 +260,7 @@ export default function Services() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-[hsl(var(--skyblue-dark))] to-[hsl(var(--skyblue))] opacity-20 rounded-xl"></div>
               <img 
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                src="inhouse_aligners.jpg" 
                 alt="Advanced dental equipment" 
                 className="rounded-xl shadow-2xl w-full relative z-10"
               />
