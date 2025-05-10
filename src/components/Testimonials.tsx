@@ -46,8 +46,8 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section 
-      id="testimonials" 
+    <section
+      id="testimonials"
       className="py-16 md:py-24 bg-white"
       style={{ position: 'relative', minHeight: '600px' }}
     >
@@ -68,9 +68,8 @@ export default function Testimonials() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
-                className={`rounded-2xl bg-gray-50 p-8 md:p-10 shadow-lg transition-opacity duration-500 ${
-                  index === current ? "opacity-100" : "opacity-0 hidden"
-                }`}
+                className={`rounded-2xl bg-gray-50 p-8 md:p-10 shadow-lg transition-opacity duration-500 ${index === current ? "opacity-100" : "opacity-0 hidden"
+                  }`}
               >
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">
                   {/* <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden flex-shrink-0">
@@ -96,16 +95,15 @@ export default function Testimonials() {
               {testimonials.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === current ? "bg-[hsl(var(--skyblue))]" : "bg-gray-300 hover:bg-[hsl(var(--skyblue))]"
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-colors ${index === current ? "bg-[hsl(var(--skyblue))]" : "bg-gray-300 hover:bg-[hsl(var(--skyblue))]"
+                    }`}
                   onClick={() => setCurrent(index)}
                   aria-label={`Go to testimonial ${index + 1}`}
                 ></button>
               ))}
             </div>
 
-            <button 
+            <button
               onClick={prev}
               className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-5 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-[hsl(var(--deepblue))] hover:text-[hsl(var(--skyblue))] transition-colors hidden md:flex"
               aria-label="Previous testimonial"
@@ -113,7 +111,7 @@ export default function Testimonials() {
               <ChevronLeft className="h-5 w-5" />
             </button>
 
-            <button 
+            <button
               onClick={next}
               className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-5 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-[hsl(var(--deepblue))] hover:text-[hsl(var(--skyblue))] transition-colors hidden md:flex"
               aria-label="Next testimonial"
@@ -121,6 +119,17 @@ export default function Testimonials() {
               <ChevronRight className="h-5 w-5" />
             </button>
           </div>
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <a
+            href="https://search.google.com/local/reviews?placeid=ChIJD5pSQwCXyzsRgtzyLip-ti8" // Replace with your real Place ID
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[hsl(var(--skyblue))] hover:bg-[hsl(var(--deepblue))] text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-colors"
+          >
+            See More Reviews
+          </a>
         </div>
       </div>
     </section>

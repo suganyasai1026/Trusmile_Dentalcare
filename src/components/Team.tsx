@@ -13,53 +13,53 @@ export default function Team() {
   const buttonAnimation = useAnimateOnScroll("fadeIn");
 
   // Define team members data in case it's not loading properly
-  const fallbackTeamMembers = [
-    {
-      id: 1,
-      name: "Dr. Sarah Johnson",
-      position: "Root Canal Specialist",
-      bio: "With over 15 years of experience, Dr. Johnson is a leading expert in painless root canal procedures and complex dental surgeries.",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
-    },
-    {
-      id: 2,
-      name: "Dr. Michael Chen",
-      position: "Chief Dental Surgeon",
-      bio: "Dr. Chen pioneered our in-house aligner technology and specializes in complex reconstructive dental procedures with minimal recovery time.",
-      image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
-    },
-    {
-      id: 3,
-      name: "Dr. Emily Rodriguez",
-      position: "Cosmetic Dentistry Expert",
-      bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
-      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
-    },
-    {
-      id: 4,
-      name: "Dr. Emily Rodriguez",
-      position: "Cosmetic Dentistry Expert",
-      bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
-      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
-    },
-    {
-      id: 5,
-      name: "Dr. Emily Rodriguez",
-      position: "Cosmetic Dentistry Expert",
-      bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
-      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
-    },
-    {
-      id: 6,
-      name: "Dr. Emily Rodriguez",
-      position: "Cosmetic Dentistry Expert",
-      bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
-      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
-    }
-  ];
+  // const fallbackTeamMembers = [
+  //   {
+  //     id: 1,
+  //     name: "Dr. Sarah Johnson",
+  //     position: "Root Canal Specialist",
+  //     bio: "With over 15 years of experience, Dr. Johnson is a leading expert in painless root canal procedures and complex dental surgeries.",
+  //     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Dr. Michael Chen",
+  //     position: "Chief Dental Surgeon",
+  //     bio: "Dr. Chen pioneered our in-house aligner technology and specializes in complex reconstructive dental procedures with minimal recovery time.",
+  //     image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Dr. Emily Rodriguez",
+  //     position: "Cosmetic Dentistry Expert",
+  //     bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
+  //     image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Dr. Emily Rodriguez",
+  //     position: "Cosmetic Dentistry Expert",
+  //     bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
+  //     image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "Dr. Emily Rodriguez",
+  //     position: "Cosmetic Dentistry Expert",
+  //     bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
+  //     image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+  //   },
+  //   {
+  //     id: 6,
+  //     name: "Dr. Emily Rodriguez",
+  //     position: "Cosmetic Dentistry Expert",
+  //     bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
+  //     image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+  //   }
+  // ];
   
   // Use fallback data if teamMembers is empty or undefined
-  const doctors = teamMembers && teamMembers.length > 0 ? teamMembers : fallbackTeamMembers;
+  const doctors =  teamMembers ;
 
   return (
     <section 
@@ -97,7 +97,7 @@ export default function Team() {
                 <div className="relative overflow-hidden">
                   <img 
                     src={member.image} 
-                    alt={member.name}
+                    alt={""}
                     className="w-full h-80 object-contain object-center transition-transform duration-500 group-hover:scale-105" 
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[hsl(var(--deepblue-dark))] to-transparent h-1/3 opacity-70"></div>

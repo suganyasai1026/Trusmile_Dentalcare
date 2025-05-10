@@ -14,7 +14,12 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <div className="mb-6">
               <span className="text-white font-bold text-2xl">
-               TruSmile <span className="text-[hsl(var(--skyblue))]">DentalCare</span>
+               {/* Trusmile <span className="text-[hsl(var(--skyblue))]">DentalCare</span> */}
+               <img 
+                src="logo2.png" 
+                alt="Advanced dental equipment" 
+                className="rounded-xl shadow-2xl h-[80px] w-[145px] relative z-10"
+              />
               </span>
             </div>
             <p className="text-gray-400 mb-6">

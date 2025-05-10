@@ -45,6 +45,7 @@ function Home() {
       <Footer />
       <WhatsAppButton />
       <ScrollToTop />
+      
     </>
   );
 }

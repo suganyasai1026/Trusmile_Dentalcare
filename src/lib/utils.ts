@@ -9,58 +9,58 @@ export const services = [
   {
     id: 1,
     title: "Expert Root Canal",
-    description: "Our specialists use advanced techniques to make root canal treatments painless and effective, preserving your natural teeth with minimal discomfort.",
+    description: "We offer advanced root canal treatment using modern technology for precise, painless results Our expert dentists ensure your natural tooth is saved with minimal discomfort and quick recovery We use digital X-rays and rotary tools for efficient and hygienic procedures Restore your smile with expert care",
     icon: "tooth",
-    image: "rootcanel.jpg"
+    image: "rootcanel.jpeg"
   },
   {
     id: 2,
     title: "In-House Aligners",
-    description: "World's first clinic with proprietary in-house aligner technology, providing faster, more comfortable, and precisely customized teeth straightening.",
+    description: "NoBrace SmartAlign is our advanced clear aligner system, crafted using cutting-edge digital planning and Graphy’s high-performance resin. It offers a precise, comfortable, and nearly invisible solution to straighten your teeth—without wires or brackets. Experience the future of orthodontics, custom-made for your smile.",
     icon: "wand-magic-sparkles",
-    image: "inhouse_aligners.jpeg"
+    image: "inhouse_aligners.jpg"
   },
   {
     id: 3,
     title: "Dental Implants",
-    description: "Transform your smile with our comprehensive Dental Implants procedures including veneers, whitening, bonding, and smile makeovers tailored to your desires.",
+    description: "Using premium systems like Osstem implants for superior strength, stability, and aesthetics. Our experienced dentists ensure safe, painless procedures with modern technology and precision planning Whether replacing a single tooth or multiple, we deliver natural-looking, long-lasting results Restore your smile with confidence",
     icon: "face-smile",
-    image: "dental-implants.jpeg"
+    image: "dental-implants.jpg"
   },
   {
     id: 4,
     title: "Dental Surgery",
-    description: "Our experienced surgeons specialize in complex dental procedures including extractions, implants, and reconstructive surgery with a focus on minimizing recovery time.",
+    description: "We offer expert oral and maxillofacial surgeries using advanced, minimally invasive techniques Our services include wisdom tooth removal, cyst removal, flap surgeries, and more—all performed in a safe, hygienic environment Our experienced dental surgeons focus on painless treatment and quick recovery.",
     icon: "user-doctor",
     image: "sd.jpeg"
   },
   {
     id: 5,
     title: "Braces",
-    description: "Comprehensive check-ups, cleanings, and preventive treatments to maintain your oral health and detect potential issues before they become serious problems.",
+    description: "We specialize in advanced braces treatment, including Pits 21, a leading orthodontic system for precise teeth alignment.We offer both metal and ceramic braces, tailored to your specific needs for optimal results.Our experienced orthodontists ensure a comfortable, efficient process with a focus on your smile’s health and aesthetics.",
     icon: "shield-halved",
     image: "dental-braces.jpg"
   },
   {
     id: 6,
     title: "Pediatric Dentistry",
-    description: "Specialized gentle care for children in a friendly environment designed to make dental visits fun and stress-free while promoting lifelong oral health habits.",
+    description: "We provide gentle and compassionate pediatric dentistry to ensure your child’s dental health from a young age.Our expert pediatric dentists offer services such as preventive care, fillings, sealants, and early orthodontic evaluations, all in a fun and friendly environment.We use child-friendly techniques and equipment to make dental visits stress-free and enjoyable for your little ones.",
     icon: "child",
-    image: "pd.jpeg"
+    image: "pd.jpg"
   },
   {
     id: 7,
     title: "Teeth Whitening",
-    description: "Comprehensive check-ups, cleanings, and preventive treatments to maintain your oral health and detect potential issues before they become serious problems.",
+    description: "Achieve a brighter, whiter smile with Zoom Teeth Whitening at TruSmile Dental Care.This advanced in-office treatment uses powerful LED light and whitening gel to remove stains and discoloration, delivering noticeable results in just one visit.Our skilled dentists ensure a safe, comfortable procedure, leaving you with a radiant smile.",
     icon: "shield-halved",
     image: "images.jpeg"
   },
   {
     id: 8,
     title: "Smile Design",
-    description: "Comprehensive check-ups, cleanings, and preventive treatments to maintain your oral health and detect potential issues before they become serious problems.",
+    description: "Achieve a brighter, whiter smile with Zoom Teeth Whitening at TruSmile Dental Care.This advanced in-office treatment uses powerful LED light and whitening gel to remove stains and discoloration, delivering noticeable results in just one visit.Our skilled dentists ensure a safe, comfortable procedure, leaving you with a radiant smile.",
     icon: "shield-halved",
-    image: "sd.jpeg"
+    image: "smile.jpg"
   },
 ];
 
@@ -69,44 +69,51 @@ export const teamMembers = [
     id: 1,
     name: "Dr. G. Adityanarayana ",
     position: "Orthodontist and Cosmetic Dentist",
-    bio: "Specializing in smile transformations, Dr. Adityanarayana combines artistic vision with technical precision for stunning cosmetic results..",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+    bio: "A highly skilled Orthodontist and a certified PITS21 Elite Provider with expertise in precise, comfortable smile transformations.Recognized as a Digital Orthodontist and Graphy Aligner Certified specialist,  advanced digital planning.Provides customized orthodontic solutions including metal braces, ceramic braces, and 3D-printed in-house aligners for optimal results with minimal discomfort.",
+    // image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
   },
   {
     id: 2,
     name: "Dr. G. Sai Jyothsna",
     position: "Periodontist and Implantologist ",
-    bio: "Dr. Sai Jyothsna our in-house aligner technology and specializes in complex reconstructive dental procedures with minimal recovery time.",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+    bio: "Dr. Sai Jyothsna specializing in the treatment of gum diseases and advanced dental implant procedures.She is known for her gentle approach, precision, and commitment to delivering healthy, long-lasting smiles.From deep cleaning and flap surgeries to full-mouth rehabilitation with implants, Dr. Jyothsna ensures personalized and painless care.offers cutting-edge clear aligner treatments ",
+    // image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
   },
   {
     id: 3,
     name: "Dr. Rakesh C",
     position: "Endodontist",
-    bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+    bio: "Dr. Rakesh is a highly respected Endodontist and Professor with over 20 years of clinical and teaching experience.At TruSmile Dental Care, Manikonda, he specializes in advanced root canal treatments, retreatments, and restorative procedures using state-of-the-art technology.His deep expertise and gentle approach ensure precise, painless care while preserving your natural teeth.",
+    // image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
   },
   {
     id: 4,
     name: "Dr. Charan Reddy ,",
     position: "Oral and Maxillofacial Surgeon ",
-    bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
+    bio: "Dr. Charan is a skilled Oral and Maxillofacial Surgeon at TruSmile Dental Care, Manikonda, with prestigious training through the AO CMF Fellowship and IBOI Fellowship.He specializes in complex facial surgeries, wisdom tooth removal, cyst enucleation, trauma care, and minor oral procedures with a focus on precision and patient safety.With a commitment to excellence and advanced surgical expertise",
     image: "/charan.jpg"
   },
   {
     id: 5,
     name: "Dr. Anil kumar",
     position: "Prosthodontist",
-    bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+    bio: "Dr. Anil Kumar is an experienced Prosthodontist and certified BPS Denture Specialist .He focuses on restoring smiles with high-precision complete dentures, crowns, bridges, and full-mouth rehabilitations using the advanced BPS (Biofunctional Prosthetic System) technique.Known for his attention to detail and natural-looking results, Dr. Anil ensures comfort, function, and aesthetics for every patient.",
+    // image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
   },
   {
     id: 6,
     name: "Dr.Sreeja Reddy",
     position: "Pedodontist",
-    bio: "Specializing in smile transformations, Dr. Rodriguez combines artistic vision with technical precision for stunning cosmetic results.",
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
-  }
+    bio: "Dr. Sreeja is a caring and experienced Pedodontist (Child Dental Specialist) .She specializes in preventive and restorative dental care for children, including fillings, sealants, fluoride treatments, and early orthodontic guidance.With a child-friendly approach and gentle techniques, Dr. Sreeja ensures every dental visit is positive and stress-free for kids and parents alike.offers cutting-edge clear aligner treatments ",
+    // image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+  },
+  // {
+  //   id: 7,
+  //   name: "Dr.Sreeja Reddy",
+  //   position: "Pedodontist",
+  //   bio: "Dr. Sreeja is a caring and experienced Pedodontist (Child Dental Specialist) .She specializes in preventive and restorative dental care for children, including fillings, sealants, fluoride treatments, and early orthodontic guidance.With a child-friendly approach and gentle techniques, Dr. Sreeja ensures every dental visit is positive and stress-free for kids and parents alike.",
+  //   // image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+  // }
 ];
 
 export const testimonials = [
@@ -131,7 +138,7 @@ export const testimonials = [
     name: "Sreedevi Peddireddy",
     position: "braces and alignment treatment",
     quote: "What really stood out was Adithya's ability to listen to our concerns and answer all our questions. They took the time to explain everything in a way that was easy to understand, and made sure we were comfortable with the treatment plan.I would highly recommend Adithya name to anyone looking for orthodontic treatment. They are truly exceptional, and we feel lucky to have found them. Thank you Adithya , for giving my son a beautiful, smile!!",
-    rating: 4.5,
+    rating: 5,
     image: ""
   }
 ];

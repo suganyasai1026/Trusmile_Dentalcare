@@ -53,7 +53,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
             <span className="text-[hsl(var(--deepblue))] font-bold text-2xl">
-              TruSmile<span className="text-[hsl(var(--skyblue))]">DentalCare</span>
+              Trusmile<span className="text-[hsl(var(--skyblue))]">DentalCare</span>
             </span>
           </Link>
           

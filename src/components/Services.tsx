@@ -213,11 +213,11 @@ export default function Services() {
             animate={emphasisAnimation.control}
           >
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[hsl(var(--deepblue))] mb-4">Root Canal Specialists</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-[hsl(var(--deepblue))] mb-4">
+              NoBrace SmartAlign – In-House Clear Aligners with Graphy Technology</h3>
               <div className="w-16 h-1 bg-[hsl(var(--skyblue))] mb-6"></div>
               <p className="text-gray-700 mb-6">
-                Our clinic specializes in painless, advanced root canal treatments performed by expert endodontists. 
-                Using cutting-edge technology and techniques, we save teeth that would otherwise need extraction.
+              Looking for a <strong>braces-free solution to straighten your teeth</strong>? TruSmile Dental Care introduces <strong>NoBrace SmartAlign</strong>, Hyderabad’s <strong>first in-house, 3D-printed clear aligners</strong> using advanced <strong>Graphy resin technology</strong>.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
@@ -226,7 +226,7 @@ export default function Services() {
                       <path d="M10 3L4.5 8.5L2 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <span className="ml-2 text-gray-700">Virtually pain-free procedures</span>
+                  <span className="ml-2 text-gray-700">Our custom aligners are <strong>designed, printed, and delivered faster</strong>—offering a highly precise, comfortable, and invisible alternative to traditional braces.</span>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-5 h-5 bg-[hsl(var(--skyblue))] rounded-full flex items-center justify-center mt-1">
@@ -234,7 +234,7 @@ export default function Services() {
                       <path d="M10 3L4.5 8.5L2 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <span className="ml-2 text-gray-700">Same-day emergency treatment</span>
+                  <span className="ml-2 text-gray-700">Perfect for adults and teens, these <strong>invisible aligners</strong> are <strong>removable, easy to maintain</strong>, and tailored for effective smile correction.</span>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-5 h-5 bg-[hsl(var(--skyblue))] rounded-full flex items-center justify-center mt-1">
@@ -242,14 +242,18 @@ export default function Services() {
                       <path d="M10 3L4.5 8.5L2 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <span className="ml-2 text-gray-700">State-of-the-art microscope guided precision</span>
+                  <span className="ml-2 text-gray-700">Choose TruSmile Dental Care for <strong>advanced clear aligners in Hyderabad</strong>—book your <strong>NoBrace SmartAlign</strong> consultation today for a confident, wire-free smile!</span>
                 </li>
               </ul>
               <button 
-                className="bg-[hsl(var(--deepblue))] hover:bg-[hsl(var(--deepblue-dark))] text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 font-medium"
-                onClick={() => window.location.href = "#contact"}
+                className="bg-[hsl(var(--deepblue))] hover:bg-[hsl(var(--deepblue-dark))] text-white px-6 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 font-medium"
+                
               >
+                <a href={`https://wa.me/${7659077707}?text=${encodeURIComponent(
+                `Book an Appointment\nWe’d love to see your smile! Whether it’s a routine check-up, braces consultation, or aligner fitting—our team at Trusmile Dental Care is here for you.`
+              )}`} target="_blank" rel="noopener noreferrer">
                 Schedule Consultation
+                </a>
               </button>
             </div>
             

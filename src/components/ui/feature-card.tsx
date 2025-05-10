@@ -38,7 +38,8 @@ export function FeatureCard({
           style={{
             backgroundImage: `url(${imageUrl})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
           }}
         />
       )}

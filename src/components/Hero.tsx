@@ -1,17 +1,20 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "../components/ui/button";
 import { useRef } from "react";
-import { 
-  FloatingAnimation, 
-  PulseAnimation, 
-  BlinkAnimation 
+import {
+  FloatingAnimation,
+  PulseAnimation,
+  BlinkAnimation
 } from "../components/ui/floating-animation";
-import { 
-  ParallaxBackground, 
-  FloatingParallaxElement, 
-  ParallaxShape 
+import {
+  ParallaxBackground,
+  FloatingParallaxElement,
+  ParallaxShape
 } from "../components/ui/parallax-scroll";
 import React from "react";
+import { useAnimateOnScroll } from "@/hooks/useAnimateOnScroll";
+import CountUp from 'react-countup';
+
 
 // Animation variants
 const containerVariants = {
@@ -36,13 +39,13 @@ const itemVariants = {
 
 const highlightVariants = {
   hidden: { width: "0%" },
-  visible: { 
-    width: "100%", 
-    transition: { 
-      duration: 1.2, 
+  visible: {
+    width: "100%",
+    transition: {
+      duration: 1.2,
       ease: "easeInOut",
       delay: 0.5
-    } 
+    }
   }
 };
 
@@ -60,6 +63,8 @@ const letterVariants = {
 };
 
 export default function Hero() {
+  const statsAnimation = useAnimateOnScroll("zoomIn");
+
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -68,14 +73,14 @@ export default function Hero() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  
+
   // Animated text for the heading
-  const title = "Expert Dental Care for Your Perfect Smile";
+  const title = "Not Just a Clinic -A Family You Can Trust";
   const titleArray = title.split(" ");
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       ref={ref}
       className="pt-20 md:pt-32 pb-28 md:pb-36 relative overflow-hidden min-h-screen flex items-center"
     >
@@ -91,31 +96,31 @@ export default function Hero() {
       <FloatingParallaxElement className="hidden lg:block" offsetX={200} offsetY={500} speed={2}>
         <ParallaxShape shape="triangle" size={60} color="rgba(191, 219, 254, 0.2)" />
       </FloatingParallaxElement> */}
-      
+
       {/* Hero background with overlay */}
-      <motion.div 
-        className="absolute inset-0 bg-cover bg-center z-0" 
-        style={{ 
+      <motion.div
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{
           backgroundImage: "url('/clinic3.jpg')",
           y: useTransform(scrollYProgress, [0, 1], ["0%", "20%"]),
           filter: "brightness(0.9)"
         }}
       >
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-[hsl(var(--deepblue-dark))]"
           style={{ opacity: useTransform(scrollYProgress, [0, 0.5], [0.6, 0.8]) }}
         ></motion.div>
       </motion.div>
-      
+
       <div className="container mx-auto px-8 sm:px-12 lg:px-16 xl:px-24 relative z-10">
-        <motion.div 
+        <motion.div
           className="flex flex-col md:flex-row items-center"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           style={{ opacity, y }}
         >
-          <motion.div 
+          <motion.div
             className="w-full md:w-1/2 text-white mb-10 md:mb-0"
           >
             <div className="overflow-hidden">
@@ -143,24 +148,23 @@ export default function Hero() {
                 animate="visible"
               />
             </div>
-            
-            <motion.p 
+
+            <motion.p
               className="text-xl md:text-2xl mb-8 opacity-90"
               variants={itemVariants}
             >
               <span className="inline-flex items-center">
-                <BlinkAnimation  duration={4}>
-                  <span className="text-[hsl(var(--skyblue))] font-bold">World's First</span>
+                <BlinkAnimation duration={4}>
+                  <span className="text-[hsl(var(--skyblue))] font-bold">Trusmile DentalCare</span>
                 </BlinkAnimation>
-              </span> Direct Print Aliner Resin Powered  By Graphy and Specialists
-              in advanced root canal treatments and innovative dental solutions.
+              </span> in Manikonda offers expert, affordable dental services .<strong> Book your same-day or emergency appointment today—your smile is our priority! </strong>
             </motion.p>
-            
-            <motion.div 
+            {/*  */}
+            <motion.div
               className="flex flex-wrap gap-4"
               variants={itemVariants}
             >
-              <PulseAnimation scale={1.05} duration={3}>
+              {/* <PulseAnimation scale={1.05} duration={3}>
                 <Button 
                   asChild
                   size="lg"
@@ -168,27 +172,49 @@ export default function Hero() {
                 >
                   <a href="#services">Our Services</a>
                 </Button>
-              </PulseAnimation>
-              
-              <Button 
+              </PulseAnimation> */}
+
+              {/* <Button 
                 asChild
                 variant="outline"
                 size="lg"
                 className="bg-white/90 hover:bg-white text-[hsl(var(--deepblue))] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <a href="#contact">Book Appointment</a>
-              </Button>
+              </Button> */}
+              <PulseAnimation scale={1.5} duration={5}>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-green-500 hover:bg-green-600 text-white text-base sm:text-lg px-6 sm:px-8 py-6 sm:py-7 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  <a href={`https://wa.me/${7659077707}?text=${encodeURIComponent(
+                    `Book an Appointment\nWe’d love to see your smile! Whether it’s a routine check-up, braces consultation, or aligner fitting—our team at Trusmile Dental Care is here for you.`
+                  )}`} target="_blank" rel="noopener noreferrer">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 sm:h-6 sm:w-6 inline-block mr-2 sm:mr-3"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    Book Appointment
+                  </a>
+                </Button>
+              </PulseAnimation>
+
             </motion.div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="w-full md:w-1/2 md:pl-12"
             variants={itemVariants}
           >
             <FloatingAnimation yOffset={8} duration={6}>
-              <motion.img 
-                src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Expert dental professionals providing care" 
+              <motion.img
+                src="logo1.png"
+                alt="Expert dental professionals providing care"
                 className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
@@ -196,73 +222,53 @@ export default function Hero() {
             </FloatingAnimation>
           </motion.div>
         </motion.div>
-        
-        <motion.div 
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-        >
-          <motion.div 
-            className="bg-white/95 p-6 rounded-xl shadow-lg"
-            whileHover={{ 
-              y: -10, 
-              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
-            }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+
+        <div className="grid grid-cols-4 gap-4 mt-8" ref={statsAnimation.ref}>
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg"
+            initial={statsAnimation.initial}
+            animate={statsAnimation.control}
+            transition={{ delay: 0.1 }}
+            whileHover={{ scale: 1.05, y: -5 }}
           >
-            <div className="text-[hsl(var(--skyblue))] mb-4">
-              <FloatingAnimation yOffset={5} duration={2.5}>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mx-auto" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M3 5a1 1 0 011-1h2.586a1 1 0 01.707.293l.707.707H14a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V5z" clipRule="evenodd" />
-                  <path d="M9.4 6.2a1 1 0 011.2 0c.8.6 1.4 1.5 1.4 2.5 0 1.7-1.3 3-3 3s-3-1.3-3-3c0-1 .6-1.9 1.4-2.5a1 1 0 011.2 0 1 1 0 110 1.5.5.5 0 00-.4.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5c0-.2-.1-.4-.4-.5a1 1 0 010-1.5z" />
-                </svg>
-              </FloatingAnimation>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Advanced Root Canal</h3>
-            <p className="text-gray-600">Expert specialists with cutting-edge technology for painless procedures.</p>
+            <div className="text-[hsl(var(--skyblue))] font-bold text-4xl mb-2">
+              <CountUp end={10} duration={5} />+</div>
+            <div className="text-gray-600">Years of Excellence</div>
           </motion.div>
-          
-          <motion.div 
-            className="bg-white/95 p-6 rounded-xl shadow-lg"
-            whileHover={{ 
-              y: -10, 
-              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
-            }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg"
+            initial={statsAnimation.initial}
+            animate={statsAnimation.control}
+            transition={{ delay: 0.2 }}
+            whileHover={{ scale: 1.05, y: -5 }}
           >
-            <div className="text-[hsl(var(--skyblue))] mb-4">
-              <FloatingAnimation yOffset={5} duration={2.5} delay={0.3}>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mx-auto" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-                </svg>
-              </FloatingAnimation>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Experienced Surgeons</h3>
-            <p className="text-gray-600">Our world-class team ensures the highest quality of dental care.</p>
+            <div className="text-[hsl(var(--skyblue))] font-bold text-4xl mb-2">
+            <CountUp end={15000} duration={2} />+</div>
+            <div className="text-gray-600">Happy Patients</div>
           </motion.div>
-          
-          <motion.div 
-            className="bg-white/95 p-6 rounded-xl shadow-lg"
-            whileHover={{ 
-              y: -10, 
-              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
-            }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg"
+            initial={statsAnimation.initial}
+            animate={statsAnimation.control}
+            transition={{ delay: 0.3 }}
+            whileHover={{ scale: 1.05, y: -5 }}
           >
-            <div className="text-[hsl(var(--skyblue))] mb-4">
-              <FloatingAnimation yOffset={5} duration={2.5} delay={0.6}>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mx-auto" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-              </FloatingAnimation>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">In-House Aligners</h3>
-            <p className="text-gray-600">World's first clinic with in-house aligner technology for faster results.</p>
+            <div className="text-[hsl(var(--skyblue))] font-bold text-4xl mb-2"><CountUp end={6} duration={2} />+</div>
+            <div className="text-gray-600">Expert Staff</div>
           </motion.div>
-        </motion.div>
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg"
+            initial={statsAnimation.initial}
+            animate={statsAnimation.control}
+            transition={{ delay: 0.4 }}
+            whileHover={{ scale: 1.05, y: -5 }}
+          >
+            <div className="text-[hsl(var(--skyblue))] font-bold text-4xl mb-2"><CountUp end={99} duration={2} />%</div>
+            <div className="text-gray-600">Success Rate</div>
+          </motion.div>
+        </div>
       </div>
-      
+
       {/* Bottom wave decoration */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden">
         <svg

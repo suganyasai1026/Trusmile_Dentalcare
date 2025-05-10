@@ -5,7 +5,7 @@ import { PulseAnimation } from './ui/floating-animation';
 import React from "react";
 
 export default function WhatsAppButton() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const phoneNumber = "7659077707"; // Replace with your clinic's WhatsApp number
   
@@ -33,7 +33,7 @@ export default function WhatsAppButton() {
   
   return (
     <AnimatePresence>
-      {isVisible && (
+      {(
         <motion.div 
           className="fixed bottom-6 right-6 z-50 flex flex-col items-end"
           initial={{ opacity: 0, scale: 0.5, y: 50 }}
@@ -57,8 +57,8 @@ export default function WhatsAppButton() {
                 >
                   <X size={16} />
                 </button>
-                <h4 className="font-semibold text-[hsl(var(--deepblue))] mb-1">Schedule an Appointment</h4>
-                <p className="text-sm text-gray-600 mb-3">
+                <h4 className="font-bold text-[hsl(var(--deepblue))] mb-1">Schedule an Appointment</h4>
+                <p className="text-lg text-gray-600 mb-3">
                   Chat with us on WhatsApp to book your dental appointment quickly.
                 </p>
                 <button
